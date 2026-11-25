@@ -35,6 +35,10 @@ A step-by-step guide with screenshots is on the way. Leave your email on [jordia
 
 Next.js, React, Tailwind, Supabase, Mapbox, Amap, Google Places, Claude, Amazon Bedrock, AssemblyAI.
 
-## Licence
+## Licence and credit
 
-MIT. Use it, change it, build on it.
+MIT licence, copyright (c) 2026 Jordi Albanell. See [LICENSE](LICENSE).
+
+In plain words: you can use this code, change it, share it and build on it, including for paid work. The one legal condition is that **every copy keeps the copyright line and the LICENSE file**, so the code always says where it came from. Removing them breaks the licence.
+
+If you put something live that's built on it, a "Based on TripPlanner by [Jordi Albanell](https://jordialbanell.com)" link is appreciated.
