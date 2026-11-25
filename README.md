@@ -24,9 +24,9 @@ You'll need free accounts on Supabase, Mapbox, Anthropic and Google Cloud. TikTo
 
 1. **Use this template** (green button on GitHub) to make your own copy, then clone it.
 2. `npm install`
-3. **Database.** Create a Supabase project. In its SQL Editor, run the files in `supabase/` in number order.
+3. **Database.** Create a Supabase project. Open its SQL Editor, paste all of `supabase/schema.sql` and press Run (if Supabase warns about Row Level Security, choose "Run without RLS": the file turns it on for every table itself). It should list 11 tables.
 4. **Settings.** Copy `.env.example` to `.env.local` and fill in the required keys.
-5. `npm run dev` and open http://localhost:3000. Sign in with your owner password to create your first trip.
+5. `npm run dev` and open http://localhost:3000. Sign in with your owner password ("Owner? Sign in") to create your first trip.
 6. **Deploy.** Import the repo on [Vercel](https://vercel.com/new) and paste the same settings into its Environment Variables.
 
 A step-by-step guide with screenshots is on the way. Leave your email on [jordialbanell.com/projects](https://jordialbanell.com/projects) (TripPlanner > Find out more) to hear when it's out.
