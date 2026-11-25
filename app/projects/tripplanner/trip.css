@@ -1,0 +1,59 @@
+/* TripPlanner was built on Tailwind 3. These keep its v3 defaults, scoped to the app. */
+@layer base {
+  .trip-app *,
+  .trip-app ::after,
+  .trip-app ::before,
+  .trip-app ::backdrop,
+  .trip-app ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+  .trip-app button:not(:disabled),
+  .trip-app [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+}
+
+.trip-app {
+  color: #171717;
+  background: #ffffff;
+  font-family: var(--font-geist-sans), system-ui, -apple-system, sans-serif;
+}
+
+.trip-app a {
+  color: inherit;
+}
+
+/* iPhone Safari zooms the page when you tap a field with text under 16px.
+   Keep form fields at 16px on touch screens so the keyboard opens without zooming. */
+@media (hover: none) and (pointer: coarse) {
+  .trip-app input,
+  .trip-app select,
+  .trip-app textarea {
+    font-size: 16px !important;
+  }
+}
+
+/* Phone keyboard open (class set by _components/KeyboardAware.tsx).
+   Give the screen to the field you're typing in: hide the bars and the chat globe,
+   leave scroll room below, and keep pop-ups inside the part the keyboard doesn't cover. */
+html.trip-typing .trip-mobile-nav,
+html.trip-typing .trip-chat-globe {
+  display: none !important;
+}
+@media (max-width: 767px) {
+  html.trip-typing .app-frame-bar,
+  html.trip-typing .trip-header {
+    display: none !important;
+  }
+}
+html.trip-typing .trip-app .trip-pane {
+  padding-bottom: 45vh;
+}
+html.trip-typing .trip-app .fixed.inset-0 {
+  top: var(--trip-vv-top, 0px);
+  bottom: var(--trip-kb, 0px);
+}
+html.trip-typing .trip-sheet {
+  bottom: var(--trip-kb, 0px);
+  max-height: calc(100dvh - var(--trip-kb, 0px) - var(--trip-vv-top, 0px) - 8px);
+}
